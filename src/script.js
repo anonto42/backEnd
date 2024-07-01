@@ -9,10 +9,13 @@ app.use(express.urlencoded({extended:true}));
 app.use((req, res, next)=>{
     console.log("everything was good!");
     next();
-})
+});
 
-app.get('/',(req, res) =>{
-    res.send('wellcome to the world');
-})
-// 78235
+app.get('/api/post',(req, res) =>{
+    res.json('wellcome to the world');
+});
+app.get('/api/get',(req, res) =>{
+    res.json('wellcome to the world');
+});
+
 app.listen(3500);
