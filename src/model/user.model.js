@@ -16,9 +16,8 @@ const UserScema = new mongoose.Schema({
         required: true
     },
     posts:{
-        type: [
-            mongoose.Schema.Types.ObjectId
-        ]
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"Catagory"
     }
 });
 
