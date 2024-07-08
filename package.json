@@ -5,6 +5,7 @@
   "type": "module",
   "main": "script.js",
   "scripts": {
+    "start": "node ./src/script.js",
     "dev": "nodemon ./src/script.js"
   },
   "author": "sohidul islam ananto",
@@ -15,6 +16,7 @@
     "mongoose": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.2"
   }
 }

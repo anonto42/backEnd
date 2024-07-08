@@ -1,21 +1,15 @@
 import express from 'express';
+import dotenv from 'dotenv';
 const app = express();
 
 // app.use(express.static(''));
 
+dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.use((req, res, next)=>{
-    console.log("everything was good!");
-    next();
-});
 
-app.get('/api/post',(req, res) =>{
-    res.json('wellcome to the world');
-});
-app.get('/api/get',(req, res) =>{
-    res.json('wellcome to the world');
-});
 
-app.listen(3500);
+app.listen(process.env.PORT,function(){
+    console.log(`surver is runing on ${process.env.PORT}`);
+});
