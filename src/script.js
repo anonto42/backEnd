@@ -1,3 +1,4 @@
+import { routers } from './router/user.router.js';
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/db.js';
@@ -19,6 +20,11 @@ app.use(cookieParser());
 app.use(express.json({limit:"10kb"}));
 app.use(express.urlencoded({limit:"10kb",extended:true}));
 app.use(express.static("public"));
+
+
+// Configure express routes with express router
+
+app.use('/api/v1/user', routers);
 
 
 // DB connection
