@@ -4,6 +4,12 @@ const dataPrint =(req,res,next)=>{
     next();
 }
 
+const middlewareQuary = (req, res, next)=>{ 
+    console.log(`your middleware is round sucessfully`);
+    req.body.query = {...req.body.query, isQuary : true};
+    next();
+}
 
 
-export {dataPrint}
+
+export {dataPrint , middlewareQuary}
